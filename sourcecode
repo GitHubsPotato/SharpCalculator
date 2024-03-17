@@ -1,0 +1,91 @@
+using System;
+
+public class SharpCalculator
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("###################");
+        Console.WriteLine("#                 #");
+        Console.WriteLine("# SHARPCALCULATOR #");
+        Console.WriteLine("#                 #");
+        Console.WriteLine("#   CREATED BY    #");
+        Console.WriteLine("#  GABRIEL LOPEZ  #");
+        Console.WriteLine("#                 #");
+        Console.WriteLine("###################");
+        Console.WriteLine("");
+        Console.WriteLine("Welcome!");
+        while (true) {
+            Console.WriteLine("");
+            Console.WriteLine("What operator would you like to use?");
+            string input = Console.ReadLine();
+
+            if (input == "list") {
+                Console.WriteLine("########################");
+                Console.WriteLine("#                      #");
+                Console.WriteLine("# Addition             #");
+                Console.WriteLine("# Subtraction          #");
+                Console.WriteLine("# Multiplication       #");
+                Console.WriteLine("# Division             #");
+                Console.WriteLine("# Modulo               #");
+                Console.WriteLine("#                      #");
+                Console.WriteLine("#  More will be coming #");
+                Console.WriteLine("#        soon!         #");
+                Console.WriteLine("########################");
+                Console.WriteLine("type list again for help");
+            } else if (input == "addition") {
+                Console.WriteLine("Please enter two numbers.");
+                int num1 = Convert.ToInt32(Console.ReadLine());
+                int num2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("The answer is " + (num1 + num2).ToString());
+            } else if (input == "subtraction") {
+                Console.WriteLine("Please enter two numbers.");
+                int num1 = Convert.ToInt32(Console.ReadLine());
+                int num2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("The answer is " + (num1 - num2).ToString());
+            } else if (input == "multiplication") {
+                Console.WriteLine("Please enter two numbers.");
+                int num1 = Convert.ToInt32(Console.ReadLine());
+                int num2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("The answer is " + (num1 * num2).ToString());
+            } else if (input == "division") {
+                Console.WriteLine("Please enter two numbers.");
+                int num1 = Convert.ToInt32(Console.ReadLine());
+                int num2 = Convert.ToInt32(Console.ReadLine());
+                if (num2 != 0) {
+                    Console.WriteLine("The answer is " + (num1 / num2).ToString());
+                } else {
+                    Console.WriteLine("Dividing by 0 is not allowed.");
+                }
+            } else if (input == "modulo") {
+                Console.WriteLine("Please enter two numbers.");
+                int num1 = Convert.ToInt32(Console.ReadLine());
+                int num2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("The answer is " + (num1 % num2).ToString());
+            } else if (input == "rules") {
+                Console.WriteLine("########################################");
+                Console.WriteLine("#                                      #");
+                Console.WriteLine("#           OBEY THE RULES!            #");
+                Console.WriteLine("#                                      #");
+                Console.WriteLine("# 1. Type in all lowercase.            #");
+                Console.WriteLine("# 2. Do not misspell anything.         #");
+                Console.WriteLine("# 3. ONLY type numbers when in calcula #");
+                Console.WriteLine("#    tion, otherwise you will crash.   #");
+                Console.WriteLine("# 4. Never, EVER, divide by 0.         #");
+                Console.WriteLine("########################################");
+            } else if (input == "version") {
+                Console.WriteLine("-----------------------------------");
+                Console.WriteLine("|        Verison 1.0.0 beta       |");
+                Console.WriteLine("-----------------------------------");
+            } else {
+                Console.WriteLine("--------------------------------------");
+                Console.WriteLine("| ERROR                              |");
+                Console.WriteLine("!------------------------------------|");
+                Console.WriteLine("|                                    |");
+                Console.WriteLine("| That is an unsupported/invalid     |");
+                Console.WriteLine("| operator. Please try again.        |");
+                Console.WriteLine("|                                    |");
+                Console.WriteLine("--------------------------------------");
+            }
+        }
+    }
+}
